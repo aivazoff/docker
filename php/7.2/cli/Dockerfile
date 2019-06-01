@@ -1,7 +1,5 @@
 FROM php:7.2-cli
 
-ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
-
 RUN apt-get update
 RUN apt-get install -y \
     apt-utils \

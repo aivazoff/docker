@@ -1,1 +1,3 @@
-# docker
+# Supported tags and respective Dockerfile links
+#### [7.2-fpm](https://github.com/armd-pro/docker/blob/master/php/7.2/fpm/Dockerfile)
+#### [7.2-cli](https://github.com/armd-pro/docker/blob/master/php/7.2/cli/Dockerfile)

@@ -1,5 +1,7 @@
 FROM php:5.6-apache
 
+MAINTAINER Arman Badalyan <armancho1@gmail.com>
+
 RUN apt-get update
 RUN apt-get install -y \
     apt-utils \

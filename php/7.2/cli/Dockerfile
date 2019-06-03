@@ -1,5 +1,7 @@
 FROM php:7.2-cli
 
+MAINTAINER Arman Badalyan <armancho1@gmail.com>
+
 RUN apt-get update
 RUN apt-get install -y \
     apt-utils \

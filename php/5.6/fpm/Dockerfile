@@ -15,5 +15,8 @@ RUN docker-php-ext-install -j$(nproc) gd zip pcntl mysqli pdo_mysql
 RUN pecl install xdebug-2.5.5
 RUN docker-php-ext-enable xdebug
 
+RUN usermod -u 1000 www-data
+RUN chown -R www-data:www-data /var/www
+
 WORKDIR /var/www
 CMD ["php-fpm"]

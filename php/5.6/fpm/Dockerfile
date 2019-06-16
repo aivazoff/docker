@@ -10,7 +10,7 @@ RUN apt-get install -y \
 
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-configure zip --with-libzip
-RUN docker-php-ext-install -j$(nproc) gd zip pcntl mysqli pdo_mysql
+RUN docker-php-ext-install -j$(nproc) gd zip pcntl mysql mysqli pdo_mysql
 
 RUN pecl install xdebug-2.5.5
 RUN docker-php-ext-enable xdebug

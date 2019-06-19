@@ -15,6 +15,9 @@ RUN docker-php-ext-install -j$(nproc) gd zip pcntl mysqli pdo_mysql
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
 
+RUN curl -sS https://getcomposer.org/installer \
+    | php -- --install-dir=/usr/local/bin --filename=composer
+
 RUN usermod -u 1000 www-data
 RUN chown -R www-data:www-data /var/www
 

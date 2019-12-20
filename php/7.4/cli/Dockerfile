@@ -1,6 +1,6 @@
 FROM php:7.4-cli
 
-MAINTAINER Arman Badalyan <armancho1@gmail.com>
+MAINTAINER Arthur Aivazov <armancho1@gmail.com>
 
 RUN apt-get update
 RUN apt-get install -y \

@@ -7,7 +7,8 @@ RUN apt-get install -y \
     apt-utils \
     libjpeg62-turbo-dev libfreetype6-dev libpng-dev \
     libzip-dev \
-    libicu-dev
+    libicu-dev \
+    zlib1g-dev g++
 
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-configure zip --with-libzip

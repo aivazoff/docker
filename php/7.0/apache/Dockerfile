@@ -2,7 +2,7 @@ FROM php:7.0-apache
 
 COPY --from=composer/composer /usr/bin/composer /usr/bin/composer
 
-MAINTAINER Arthur Aivazov <armancho1@gmail.com>
+MAINTAINER Arthur Aivazov <artur.aivazoff@gmail.com>
 
 RUN apt-get update
 RUN apt-get install -y \

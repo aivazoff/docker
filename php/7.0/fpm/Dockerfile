@@ -1,6 +1,8 @@
 FROM php:7.0-fpm
 
-MAINTAINER Arthur Aivazov <armancho1@gmail.com>
+COPY --from=composer/composer /usr/bin/composer /usr/bin/composer
+
+MAINTAINER Arthur Aivazov <artur.aivazoff@gmail.com>
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -16,11 +18,8 @@ RUN docker-php-ext-configure intl
 
 RUN docker-php-ext-install -j$(nproc) gd zip pcntl mysqli pdo_mysql intl
 
-RUN pecl install xdebug
+RUN pecl install xdebug-2.9.0
 RUN docker-php-ext-enable xdebug
-
-RUN curl -sS https://getcomposer.org/installer \
-    | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN usermod -u 1000 www-data
 RUN chown -R www-data:www-data /var/www
